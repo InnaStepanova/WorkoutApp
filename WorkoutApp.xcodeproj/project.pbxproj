@@ -21,6 +21,7 @@
 		024E4BA42959F9ED0069175C /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024E4BA32959F9ED0069175C /* SessionController.swift */; };
 		024E4BA62959FA5A0069175C /* ProgressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024E4BA52959FA5A0069175C /* ProgressController.swift */; };
 		024E4BA8295A14B20069175C /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024E4BA7295A14B20069175C /* SettingsController.swift */; };
+		024E4BAC295B5C6C0069175C /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024E4BAB295B5C6C0069175C /* SecondaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		024E4BA32959F9ED0069175C /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		024E4BA52959FA5A0069175C /* ProgressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressController.swift; sourceTree = "<group>"; };
 		024E4BA7295A14B20069175C /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		024E4BAB295B5C6C0069175C /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +108,7 @@
 				024E4BA7295A14B20069175C /* SettingsController.swift */,
 				024E4B9B2959D1120069175C /* NavBarController.swift */,
 				024E4B9D2959D3F50069175C /* BaceController.swift */,
-				024E4BA12959F96D0069175C /* OverviewController.swift */,
+				024E4BA9295B5C230069175C /* New Group */,
 				024E4BA32959F9ED0069175C /* SessionController.swift */,
 				024E4BA52959FA5A0069175C /* ProgressController.swift */,
 			);
@@ -121,6 +123,23 @@
 				024E4B9F2959F7780069175C /* UIView + Ext.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		024E4BA9295B5C230069175C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				024E4BAA295B5C380069175C /* Views */,
+				024E4BA12959F96D0069175C /* OverviewController.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		024E4BAA295B5C380069175C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				024E4BAB295B5C6C0069175C /* SecondaryButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +218,7 @@
 				024E4BA02959F7780069175C /* UIView + Ext.swift in Sources */,
 				024E4B982958A2570069175C /* UIColor+Ext.swift in Sources */,
 				024E4BA42959F9ED0069175C /* SessionController.swift in Sources */,
+				024E4BAC295B5C6C0069175C /* SecondaryButton.swift in Sources */,
 				024E4BA62959FA5A0069175C /* ProgressController.swift in Sources */,
 				024E4BA22959F96D0069175C /* OverviewController.swift in Sources */,
 				024E4B80295868A60069175C /* AppDelegate.swift in Sources */,

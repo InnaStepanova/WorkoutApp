@@ -15,6 +15,7 @@ enum Resources {
         static let separator = UIColor(hexString: "#E8ECEF")
         static let titleNavBar = UIColor(hexString: "#545C77")
         static let background = UIColor(hexString: "#F8F9F9")
+        static let allWorkoutButton = UIColor(hexString: "#F0F3FF")
     }
     
     enum Strings {
@@ -23,15 +24,17 @@ enum Resources {
             static var session = "Session"
             static var progress = "Progress"
             static var settings = "Settings"
+            static var allWorcoutButton = "All Workout"
         }
     }
     
     enum Images {
         enum TabBar {
-            static var overwiew = UIImage(named: "Overview")
-            static var session = UIImage(named: "Session")
-            static var progress = UIImage(named: "Progress")
-            static var settings = UIImage(named: "Settings")
+            static let overwiew = UIImage(named: "Overview")
+            static let session = UIImage(named: "Session")
+            static let progress = UIImage(named: "Progress")
+            static let settings = UIImage(named: "Settings")
+            static let allWorkoutsArrov = UIImage(named: "DownArrow")
         }
     }
     

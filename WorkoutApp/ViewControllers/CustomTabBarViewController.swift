@@ -39,7 +39,7 @@ final class CustomTabBarController: UITabBarController {
         let overviewNavigation = NavBarController(rootViewController: overviewController)
         let sessionNavigation = NavBarController(rootViewController: sessionController)
         let progressNavigation = NavBarController(rootViewController: progressController)
-        let settingsNavigation = NavBarController(rootViewController: settingsController)
+        let settingsNavigation = NavBarController (rootViewController: settingsController)
         
         overviewController.tabBarItem = UITabBarItem(
             title: Resources.Strings.TabBar.overview,

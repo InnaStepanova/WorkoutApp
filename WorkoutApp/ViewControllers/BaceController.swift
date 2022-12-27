@@ -21,10 +21,11 @@ class BaseController: UIViewController {
 
 @objc extension BaseController {
     func addViews() {}
-    func layout() {}
+    func layoutViews() {}
     func configure() {
         view.backgroundColor = Resources.Colors.background
     }
+    
     func leftBarButtonPressed() {
         
     }
