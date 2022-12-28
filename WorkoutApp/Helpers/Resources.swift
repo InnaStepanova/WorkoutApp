@@ -20,11 +20,12 @@ enum Resources {
     
     enum Strings {
         enum TabBar {
-            static var overview = "Overview"
-            static var session = "Session"
-            static var progress = "Progress"
-            static var settings = "Settings"
-            static var allWorcoutButton = "All Workout"
+            static let overview = "Overview"
+            static let session = "Session"
+            static let progress = "Progress"
+            static let settings = "Settings"
+            static let allWorcoutButton = "All Workout"
+            static let navBarTitle = "Today"
         }
     }
     
@@ -35,6 +36,7 @@ enum Resources {
             static let progress = UIImage(named: "Progress")
             static let settings = UIImage(named: "Settings")
             static let allWorkoutsArrov = UIImage(named: "DownArrow")
+            static let addBotton = UIImage(named: "AddButton")
         }
     }
     

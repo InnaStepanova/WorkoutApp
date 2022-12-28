@@ -20,6 +20,11 @@ extension UIView {
         addSubview(separator)
     }
     
+    func addView(_ view: UIView) {
+        addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
     func makeSustemButton(_ button: UIButton) {
         button.addTarget(self, action: #selector(hendleIn), for: [.touchDown,
                                                                   .touchDragInside])
