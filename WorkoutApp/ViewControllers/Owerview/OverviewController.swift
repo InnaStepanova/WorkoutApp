@@ -10,12 +10,6 @@ import UIKit
 class OverviewController: BaseController {
     let overviewNavBar = OwerviewNavigationBar()
     
-    
-    override func viewDidLoad() {
-        addViews()
-        layoutViews()
-        configure()
-    }
 }
 
 extension OverviewController {
@@ -30,8 +24,7 @@ extension OverviewController {
         NSLayoutConstraint.activate([
             overviewNavBar.topAnchor.constraint(equalTo: view.topAnchor),
             overviewNavBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            overviewNavBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            overviewNavBar.heightAnchor.constraint(equalToConstant: 120)
+            overviewNavBar.trailingAnchor.constraint(equalTo: view.trailingAnchor)
  ])
     }
     

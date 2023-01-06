@@ -25,7 +25,7 @@ extension UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func makeSustemButton(_ button: UIButton) {
+    func addAnimateTo(_ button: UIButton) {
         button.addTarget(self, action: #selector(hendleIn), for: [.touchDown,
                                                                   .touchDragInside])
         button.addTarget(self, action: #selector(hendleOut), for: [.touchUpInside,
