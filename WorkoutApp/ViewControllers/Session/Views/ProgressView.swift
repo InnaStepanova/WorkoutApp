@@ -12,6 +12,8 @@ final class ProgressView: UIView {
     
     func drawProgressView(persent: CGFloat) {
         
+        layer.sublayers?.removeAll()
+        
         let circleFrame = UIScreen.main.bounds.width - (15 + 40) * 2
         let radius = circleFrame / 2
         let center = CGPoint(x: radius, y: radius)
@@ -24,6 +26,14 @@ final class ProgressView: UIView {
                                       endAngle: endAngle,
                                       clockwise: true)
         
+        let defaultLayer = CAShapeLayer()
+        defaultLayer.path = circlePath.cgPath
+        defaultLayer.strokeColor = Resources.Colors.background.cgColor
+        defaultLayer.lineWidth = 20
+        defaultLayer.fillColor = UIColor.clear.cgColor // цвет который заполнить все пространство внутри
+        defaultLayer.lineCap = .round
+        defaultLayer.strokeEnd = 1
+        
         let circleLayer = CAShapeLayer()
         circleLayer.path = circlePath.cgPath
         circleLayer.strokeColor = Resources.Colors.active.cgColor
@@ -31,8 +41,83 @@ final class ProgressView: UIView {
         circleLayer.fillColor = UIColor.clear.cgColor // цвет который заполнить все пространство внутри
         circleLayer.lineCap = .round
         circleLayer.strokeEnd = persent
+
+        let dotAngle = CGFloat.pi * (7/6 - 8/6 * persent)
+        let dotPoint = CGPoint(x: cos(-dotAngle) * radius + center.x,
+                                    y: sin(-dotAngle) * radius + center.y)
+        let dotPath = UIBezierPath()
+        dotPath.move(to: dotPoint)
+        dotPath.addLine(to: dotPoint)
         
+        let dotLayer = CAShapeLayer()
+        dotLayer.path = dotPath.cgPath
+        dotLayer.fillColor = UIColor.clear.cgColor
+        dotLayer.strokeColor = UIColor.white.cgColor
+        dotLayer.lineCap = .round
+        dotLayer.lineWidth = 8
+        
+        let bigDotLayer = CAShapeLayer()
+        bigDotLayer.path = dotPath.cgPath
+        bigDotLayer.fillColor = UIColor.clear.cgColor
+        bigDotLayer.strokeColor = Resources.Colors.active.cgColor
+        bigDotLayer.lineCap = .round
+        bigDotLayer.lineWidth = 20
+        
+//        addv Stroke line bars
+        
+        let barsFrame = UIScreen.main.bounds.width - (15 + 40 + 25) * 2
+        let barsRadius = barsFrame / 2
+        
+        let barsPath = UIBezierPath(arcCenter: center,
+                                    radius: barsRadius,
+                                    startAngle: startAngle,
+                                    endAngle: endAngle,
+                                    clockwise: true)
+        
+        let barsLayer = CAShapeLayer()
+        barsLayer.path = barsPath.cgPath
+        barsLayer.fillColor = UIColor.clear.cgColor
+        barsLayer.strokeColor = UIColor.clear.cgColor
+        barsLayer.lineWidth = 6
+        
+        let startBarRadius = barsRadius - barsLayer.lineWidth / 2
+        let endBarRadius = startBarRadius + 6
+        
+        var angle: CGFloat = 7 / 6
+        
+        (1...9).forEach { _ in
+            let barAngle = CGFloat.pi * angle
+            print (barAngle)
+            let startBarPoint = CGPoint(x: cos(-barAngle) * startBarRadius + center.x,
+                                        y: sin(-barAngle) * startBarRadius + center.y)
+            
+            let endBarPoint = CGPoint(x: cos(-barAngle) * endBarRadius + center.x,
+                                    y: sin(-barAngle) * endBarRadius + center.y)
+            
+            let barPath = UIBezierPath()
+            barPath.move(to: startBarPoint)
+            barPath.addLine(to: endBarPoint)
+            
+            let barLayer = CAShapeLayer()
+            barLayer.path = barPath.cgPath
+            barLayer.fillColor = UIColor.clear.cgColor
+            barLayer.strokeColor = angle >= (7 / 6 - (8 / 6 * persent)) ? Resources.Colors.active.cgColor : Resources.Colors.separator.cgColor
+            barLayer.lineCap = .round
+            barLayer.lineWidth = 4
+            
+            barsLayer.addSublayer(barLayer)
+            
+            angle -= 1 / 6
+        
+        }
+        
+        
+        
+        layer.addSublayer(defaultLayer)
         layer.addSublayer(circleLayer)
+        layer.addSublayer(bigDotLayer)
+        layer.addSublayer(dotLayer)
+        layer.addSublayer(barsLayer)
         
     }
     }

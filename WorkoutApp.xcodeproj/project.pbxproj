@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0245997B297025840005F3B5 /* CompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245997A297025840005F3B5 /* CompletedView.swift */; };
 		024E4B80295868A60069175C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024E4B7F295868A60069175C /* AppDelegate.swift */; };
 		024E4B82295868A60069175C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024E4B81295868A60069175C /* SceneDelegate.swift */; };
 		024E4B84295868A60069175C /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024E4B83295868A60069175C /* CustomTabBarViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0245997A297025840005F3B5 /* CompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedView.swift; sourceTree = "<group>"; };
 		024E4B7C295868A60069175C /* WorkoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		024E4B7F295868A60069175C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		024E4B81295868A60069175C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				028DBED029689D0C00CF31D1 /* ProgressView.swift */,
 				028DBED329689DE700CF31D1 /* TimerView.swift */,
+				0245997A297025840005F3B5 /* CompletedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				024E4BB3295C98E80069175C /* SettingsController.swift in Sources */,
 				024E4BB1295C3B0F0069175C /* BaseView.swift in Sources */,
 				024E4BB9295CA2F90069175C /* WeekDayView.swift in Sources */,
+				0245997B297025840005F3B5 /* CompletedView.swift in Sources */,
 				028DBED129689D0C00CF31D1 /* ProgressView.swift in Sources */,
 				024E4B82295868A60069175C /* SceneDelegate.swift in Sources */,
 				024E4B9E2959D3F50069175C /* BaceController.swift in Sources */,

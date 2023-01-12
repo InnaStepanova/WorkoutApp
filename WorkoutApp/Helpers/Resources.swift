@@ -27,6 +27,12 @@ enum Resources {
             static let allWorcoutButton = "All Workout"
             static let navBarTitle = "Today"
         }
+        enum Session{
+            static let elapsedTimeLabel = "Elapsed Time"
+            static let remainingTimeLabel = "Remaining Time"
+            static let completeLabel = "COMPLETE"
+            static let remainingLabel = "RENAINING"
+        }
     }
     
     enum Images {
